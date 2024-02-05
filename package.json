@@ -1,0 +1,18 @@
+{
+  "name": "gcp-emulators",
+  "version": "1.0.0",
+  "description": "emulator and config for running GCP local dev",
+  "main": "index.js",
+  "scripts": {
+    "start": "firebase emulators:start --project kopa-ai-local",
+    "init": "firebase init emulators ",
+    "firebase": "firebase",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Khalid Elshafie",
+  "license": "MIT",
+  "dependencies": {
+    "firebase-tools": "^13.1.0"
+  }
+}

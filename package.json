@@ -4,9 +4,9 @@
   "description": "emulator and config for running GCP local dev",
   "main": "index.js",
   "scripts": {
-    "start": "FIRESTORE_EMULATOR_HOST=[::1]:8080 concurrently \"npm run seed\" \"npm run emulators\"",
-    "seed": "node src/index.js",
-    "emulators": "firebase emulators:start --project kopa-ai-local",
+    "start": "FIRESTORE_EMULATOR_HOST=[::1]:8080 npm run emulators",
+    "seed": "FIRESTORE_EMULATOR_HOST=[::1]:8080 node src/index.js",
+    "emulators": "firebase emulators:start --project kopa-ai-local --import=./data --export-on-exit",
     "init": "firebase init emulators ",
     "firebase": "firebase",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@google-cloud/firestore": "^7.3.0",
-    "concurrently": "^8.2.2",
+    "axios": "^1.6.7",
     "firebase-tools": "^13.1.0"
   }
 }
